@@ -101,13 +101,13 @@ public:
 			{
 				T *t = new T();
 				t->Parse(v[i]);
-				if (this->_map.find(t->GetKey()) == this->_map.end())
+				if (this->container_.find(t->GetKey()) == this->container_.end())
 				{
-					this->_map[t->GetKey()] = t;
+					this->container_[t->GetKey()] = t;
 				}
 				else
 				{
-					this->_map[t->GetKey()]->Parse(v[i]);
+					this->container_[t->GetKey()]->Parse(v[i]);
 					delete t;
 				}
 			}
@@ -115,13 +115,13 @@ public:
 	}
 	const T *Find(typename T::KEY_TYPE k)
 	{
-		auto it = this->_map.find(k);
-		return it == this->_map.end() ? nullptr : it->second;
+		auto it = this->container_.find(k);
+		return it == this->container_.end() ? nullptr : it->second;
 	}
 
 	void Relate()
 	{
-		for (auto &p : this->_map)
+		for (auto &p : this->container_)
 		{
 			p.second->Relate();
 		}
@@ -129,16 +129,16 @@ public:
 
 	void Release()
 	{
-		for (auto &p : this->_map)
+		for (auto &p : this->container_)
 		{
 			delete p.second;
 		}
-		this->_map.clear();
+		this->container_.clear();
 	}
 
 	void ForEach(EachAction<const T *> &action)
 	{
-		for (auto &p : this->_map)
+		for (auto &p : this->container_)
 		{
 			if (!action.exec(p.second))
 				break;
@@ -147,5 +147,5 @@ public:
 
 private:
 	TableBase() {}
-	map_type _map;
+	map_type container_;
 };
