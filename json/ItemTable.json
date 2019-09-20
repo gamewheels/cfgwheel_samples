@@ -1,0 +1,2 @@
+[{"ID":1001,"Name":"砍刀1","Type":5,"Price":123.567,"Stack":1,"Test1":[true,true,true],"Test2":[2,3,4],"Test3":true,"Test4":["2","3","阿萨德4"],"Test5":{"Index":1,"Value":10},"Icon":1,"Desc":"阿萨德"},
+{"ID":1002,"Name":"衣服","Type":2,"Price":100,"Stack":1,"Test1":null,"Test2":null,"Test3":false,"Test4":[],"Test5":{"Index":2,"Value":20},"Icon":1,"Desc":"\"好\"东西"}]
