@@ -35,7 +35,7 @@ namespace GameConfig
 		}
 	}
 
-	public partial class TableFacade
+	public partial class Facade
 	{
 		public static DataTable<uint, QuestStruct> QuestTable = DataTable<uint, QuestStruct>.Instance;
 	}

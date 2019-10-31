@@ -80,7 +80,7 @@ namespace GameConfig
 		}
 	}
 
-	public partial class TableFacade
+	public partial class Facade
 	{
 		public static DataTable<uint, ItemStruct> ItemTable = DataTable<uint, ItemStruct>.Instance;
 	}

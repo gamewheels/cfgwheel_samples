@@ -79,7 +79,7 @@ namespace GameConfig
 		}
 	}
 
-	public partial class TableFacade
+	public partial class Facade
 	{
 		public static GeneralSettingsStruct GeneralSettings;
 	}

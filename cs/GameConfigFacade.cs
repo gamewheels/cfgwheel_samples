@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Json;
 
 namespace GameConfig
 {
-    partial class TableFacade
+    partial class Facade
     {
         public static object Parse(Type t, byte[] data)
         {
